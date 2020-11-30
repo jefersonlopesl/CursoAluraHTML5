@@ -11,7 +11,11 @@ body {
     width: 100%;
 }
 
-h1 {
+.titulo-principal {
+    padding: 30px;
+}
+
+.titulo-centralizado {
     text-align: center;
 }
 
@@ -41,10 +45,6 @@ ul {
     vertical-align: top;
     width: 20%;
     margin-right: 15%;
-}
-
-h2 {
-  text-align: center;  
 }
 
 .imagem {
