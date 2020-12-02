@@ -1,0 +1,67 @@
+<!DOCTYPE html5>
+<html>
+    <head>
+        <meta charset="UTF-8" >
+        <meta lang="pt-br">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Contato - Barbearia Felix</title>
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="produtos.css">
+    </head>
+    <body>
+        <header>
+            <div class="caixa">
+                <h1><img src="imagem/logo.png" alt="Logo da barbearia Felix"></h1>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Ínicio</a></li>
+                        <li><a href="produtos.html">Produtos</a></li>
+                        <li><a href="contato.html">Contato</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header> 
+        <main>
+            <form>
+               <label for="nomeesobrenome">Nome e sobrenome</label>
+                <input type="text" id="nomeesobrenome" required placeholder="Seu nome e sobrenome" class="input-padrao">
+
+                <label for="email">Email</label>
+                <input type="text" id="email" class="input-padrao" required placeholder="seumeail@dominio.com">
+
+                <label for="telefone">Telefone</label>
+                <input type="text" id="telefone"class="input-padrao" required placeholder="(XXX) XXXX XXXX">
+                <input type="submit" value="Enviar formulário" required>
+
+                <label for="mensagem">Mensagem</label>
+                <textarea cols="60" rows="10" id="mensagem"></textarea>
+
+                <fieldset>
+                    <legend>Como prefere o nosso contato?</legend>
+
+                    <label for="radio-email"><input type="radio" name="contato" value="Email" id="radio-email">Email</label>
+
+                    <label for="radio-telefone"><input type="radio" name="contato" value="telefone" id="radio-telefone">Telefone</label> 
+                     
+                    <label for="radio-Whatapp"><input type="radio" name="contato" value="whatsapp" id="whatsapp" checked>Whatsapp</label>
+                    
+                </fieldset>
+                <fieldset>
+                    <legend>Qual horário prefere ser atendido?</legend>
+                    <select name="" id="">
+                        <option value="">Manha</option>
+                        <option value="">Tarde</option>
+                        <option value="">Noite</option>
+                    </select>
+                </fieldset>
+                <label for="checkbox"><input type="checkbox" class="" chacked>Gostaria de receber nossas novidades?</input></label>
+            </form>
+        </main>
+        <footer>
+            <img src="imagem/logo-branco.png" alt="Logo da barbearia Felix">
+            <p class="copyrigth">
+              &copy;  Copyrigth Barbearia Felix 2020
+            </p>
+        </footer>
+    </body>
+</html>
