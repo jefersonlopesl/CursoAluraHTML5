@@ -1,10 +1,48 @@
 body {
-    
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.titulo-principal {
+    text-align: center;
+    font-size: 2em;
+    margin: 0 0 1em;
+    color: rgba(0,0,0,0.3)
+}
+
+.titulo-principal:first-letter{
+    font-weight: bold;
+    font-size: 4em;
 }
 
 .principal {
-    background: #CCCCCC;
+    background: radial-gradient( black,white);
     padding: 30px;
+}
+
+.principal p {
+    margin: 0 0 1em;
+}
+
+/* podemos tambem usar:
+.titulo:before{
+    content="	
+&#10017";
+}
+.titulo:after{
+    content="	
+&#10017";
+}
+
+ou todos paragrafos que não são, neste caso(missao):
+
+.principal:not(#missao) { background: red;}
+
+*/
+
+
+.principal strong {
+   font-weight: bold;
+   font-style:  italic;
 }
 
 #banner {
@@ -13,6 +51,7 @@ body {
 
 .titulo-principal {
     padding: 30px;
+    clear: left;
 }
 
 .titulo-centralizado {
@@ -23,6 +62,18 @@ p {
     text-align: center;  
 }
 
+p:first-line {
+    font-style: italic;
+}
+
+main > p {
+    background: red;
+}
+
+img+p {
+    background: blue;
+} /* caso fossem todos paragrafos depois de uma imagem ficaria desta forma: img~p {background: green; } */
+
 #missao {
 font-size: 20px;
 }
@@ -31,13 +82,28 @@ em strong {
     color: #FF0000;
 }
 
+.imagem {
+    width: 60%;
+}
+
+.utensilios {
+   width: 120px;  
+   float: left;
+   margin: 0 10px 10px 0;
+}
+
 .itens {
     font-style: italic;
+}
+
+.itens:nth-child(2n) {
+    font-weight: bold;
 }
 
 .beneficios {
     background: #ffffff;
     padding: 20px;
+    vertical-align: top;
 }
 
 ul {
@@ -48,5 +114,24 @@ ul {
 }
 
 .imagem {
-  width: 50%;  
+  width: 50%; 
+  opacity: 0.7; 
+  box-shadow: 5px 5px 3px #000000, -5px -5px yellow, -10px 10px rgba(255,0,0,0.5);
+}
+
+.imagem:hover {
+    opacity: 1;
+    transition: 1s;
+}
+
+@media screen and (max width: 480px) {
+  .caixa, .principal, .conteudo-principal {
+    width: auto;
+  }
+    h1 {
+     text-align: center;   
+    }
+    nav {
+    position: static;
+    }
 }
